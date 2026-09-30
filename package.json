@@ -1,0 +1,24 @@
+{
+  "name": "senac_exercicios",
+  "version": "1.0.0",
+  "description": "Repositório contendo atividades do curso Senac",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albin07454/senac_exercicios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/albin07454/senac_exercicios/issues"
+  },
+  "homepage": "https://github.com/albin07454/senac_exercicios#readme",
+  "dependencies": {
+    "@inquirer/prompts": "^8.7.2"
+  }
+}

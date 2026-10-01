@@ -1,23 +1,12 @@
-// import {input, number} from '@inquirer/prompts';
-// import { argon2Sync } from 'node:crypto';
-// import { convertProcessSignalToExitCode } from 'node:util';
+import {confirm, number} from '@inquirer/prompts';
 
-// const nome = await input({message: 'Qual é o seu nome?'});
+const idade = await number({ message:'Idade -->' , required: true});
+const ingresso = await confirm({ message:'Tem ingresso? -->' , required: true});
+const Acompanhado = await confirm({ message:'acompanhado? -->' , required: true});
 
-// let idade = await number({
-// message: 'Idade?',
-// min: 0,
-// max: 120,
-// required: true,
-// })
+const mensagem = ((ingresso) && (idade >= 18 || acompanhado)) ? "Entrada Liberada!" : "Volta pra casa!";
 
-// let idade_depois = idade + 1;
-   
-// console.log("Bem vindo "+nome + "!");
-// console.log(typeof idade);
-// console.log(typeof idade_depois);
-// console.log("Ano que vem vc terá " + idade_depois + "anos.");
+console.log(mensagem);
 
-const idade = await number(( message:"Qual a sua idade?"));
-const Temingresso = await confirm(( message:"Voce tem ingresso?"));
-const estaAcompanhado = await confirm(( message"Voce está acompanhado?"));
+
+

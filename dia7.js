@@ -1,4 +1,5 @@
-import {select, number} from '@inquirer/prompts';
+import { input, number } from '@inquirer/prompts';
+
 const quantidadeProdutos = await number({
     message: 'Quantos produtos serão cadastrados?',
     min: 1,
@@ -45,4 +46,13 @@ while (contador <= quantidadeProdutos) {
 
     contador++;
 }
+
+console.log("----- RESUMO FINAL -----");
+
+console.log(`Total dos preços: R$ ${totalPrecos.toFixed(2)}`);
+console.log(`Produtos baratos: ${baratos}`);
+console.log(`Produtos médios: ${medios}`);
+console.log(`Produtos caros: ${caros}`);
+
+
 

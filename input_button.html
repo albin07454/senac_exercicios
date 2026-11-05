@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input + Button</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e0e7ff, #f0f9ff);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cartao {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #1e3a8a;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #c7d2fe;
+            border-radius: 8px;
+            outline: none;
+            margin-bottom: 16px;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: #2563eb;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="cartao">
+        <h1>Formulário</h1>
+
+        <input type="text" id="nome" placeholder="Digite seu nome...">
+        <button type="button" id="botao">Enviar</button>
+    </div>
+
+    <script>
+        const campo = document.querySelector("#nome");
+        const botao = document.querySelector("#botao");
+
+        botao.addEventListener("click", () => {
+            const nome = campo.value.trim();
+            alert(nome);
+        });
+    </script>
+</body>

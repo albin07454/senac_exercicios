@@ -1,0 +1,10 @@
+USE chat_bd;
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    data_cadastro TIMESTAMP
+        DEFAULT CURRENT_TIMESTAMP
+) ENGINE = InnoDB;

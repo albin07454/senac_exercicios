@@ -15,7 +15,7 @@ elif operacao == "*":
     resultado = num1 * num2
     print(f"Resultado:{resultado}")
 
-elif operacao =="/":
+elif operacao == "/":
     if num2 ==0:
         print("Erro: Não é possível dividir por zero!")
     else:
